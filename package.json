@@ -4,13 +4,20 @@
   "description": "Project to quickly get something working in [p5.js](https://p5js.org/) and [typescript](https://www.typescriptlang.org/)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"browser-sync start --server -w\" \" tsc --watch\""
+    "build-bundle": "browserify dist/index.js -o dist/bundle.js",
+    "bundle": "watchify -s main dist/index.js -o dist/bundle.js",
+    "start": "concurrently \"browser-sync start --server -w\" \"tsc --watch --pretty\" \"yarn run bundle\"",
+    "build": "tsc --pretty && yarn run bundle"
   },
   "homepage": "https://github.com/Gaweph/p5-typescript-starter#readme",
   "devDependencies": {
     "@types/p5": "^0.7.1",
     "browser-sync": "^2.26.3",
     "concurrently": "^3.6.1",
-    "typescript": "^2.9.2"
+    "typescript": "^3.0.0",
+    "watchify": "^3.11.1"
+  },
+  "dependencies": {
+    "p5": "^0.7.3"
   }
 }

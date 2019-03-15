@@ -1,13 +1,34 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "outFile": "./build/build.js",
-        "sourceRoot": "./sketch/",
-        "rootDir": "./sketch/",
-        "sourceMap": true,
-        "noImplicitAny": true,
-        "module": "none"
-    }
+  "compilerOptions": {
+    "target": "es5",
+    // "target": "es2017",
+    "allowSyntheticDefaultImports": false, // no errors on commonjs default import
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "importHelpers": true, // importing helper functions from tslib
+    "noEmitHelpers": true, // disable emitting inline helper functions
+    // "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    // "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "preserveConstEnums": true,
+    "sourceRoot": "./src/",
+    "outDir": "dist",
+    "jsx": "react",
+    "lib": ["dom", "es2016", "es2017.object"]
+  },
+  "exclude": ["node_modules", "**/*.spec.*"],
+  "include": ["src/**/*", "typings/*.d.ts"]
 }
