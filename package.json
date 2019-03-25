@@ -13,15 +13,17 @@
   "devDependencies": {
     "@types/gl-matrix": "^2.4.5",
     "@types/p5": "^0.7.1",
+    "@types/ramda": "^0.26.3",
+    "@types/pixi.js": "^4.8.6",
     "browser-sync": "^2.26.3",
     "concurrently": "^3.6.1",
     "typescript": "^3.0.0",
     "watchify": "^3.11.1"
   },
   "dependencies": {
-    "@types/ramda": "^0.26.3",
     "gl-matrix": "^3.0.0",
     "p5": "^0.7.3",
+    "pixi.js": "^4.0.0",
     "ramda": "^0.26.1"
   }
 }
